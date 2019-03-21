@@ -49,7 +49,6 @@ def parse_file( fname, edges, transform, screen, color ):
 
     f = open(fname)
     lines = f.readlines()
-
     step = 0.01
 
     c = 0
@@ -122,15 +121,14 @@ def parse_file( fname, edges, transform, screen, color ):
                 save_extension(screen, args[0])
 
         elif line == 'clear':
-            edges = []
+            edges = new_matrix()
 
         elif line == 'box':
-            add_box( edges, float(args[0]), float(args[1]), float(args[2]), float(args[3]), float(args[4]), float(args[5]) )
+            add_box( edges, float(args[0]), float(args[1]), float(args[2]), float(args[3]), float(args[4]), float(args[5]))
 
         elif line == 'torus':
             add_torus( edges, float(args[0]), float(args[1]), float(args[2]), float(args[3]), float(args[4]), step)
 
         elif line == 'sphere':
-            #print("RUN")
             add_sphere( edges, float(args[0]), float(args[1]), float(args[2]), float(args[3]), step)
         c+= 1

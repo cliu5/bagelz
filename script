@@ -10,8 +10,6 @@ move
 150 200 0
 apply
 display
-save
-first.png
 #clear the edge matrix, test the sphere
 clear
 sphere
@@ -25,8 +23,6 @@ move
 250 250 0
 apply
 display
-save
-second.png
 #reset sphere, rotate 90 degrees about x to check lines
 ident
 move
